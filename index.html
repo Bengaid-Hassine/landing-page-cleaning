@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning service</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" :class="[dark? 'darkGeneral' : '']">
+        <div class="wrapper">
+            <div class="mainContent">
+                <nav class="navbar navbar-expand-xl ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="IMAGES/logo.png" alt="" height="80px" width="120px"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <!-- <span class="navbar-toggler-icon"></span> -->
+                             <i class="bi bi-list"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item firstlink">
+                                    <a :style="{borderBottom: 'solid 2px' + COLOR}" :class="[dark? 'darkNav' : '']" class="nav-link active " aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a :style="{borderBottom: 'solid 2px' + COLOR}" :class="[dark? 'darkNav' : '']" class="nav-link active" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a :style="{borderBottom: 'solid 2px' + COLOR}" :class="[dark? 'darkNav' : '']" class="nav-link active" href="#services">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a :style="{borderBottom: 'solid 2px' + COLOR}" :class="[dark? 'darkNav' : '']" class="nav-link active" href="#pricing">Pricing</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a :style="{borderBottom: 'solid 2px' + COLOR}" :class="[dark? 'darkNav' : '']" class="nav-link active" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        
+                <div class="container intro mt-5 mb-3">
+                    <div class="row justify-content-evenly">
+                        <div class="col-lg-6 col-md-8 col-sm-10 text-container">
+                            <h1 class="mb-3">Need Cleaning Services ?</h1>
+                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id labore harum suscipit
+                                sapiente! Nihil, praesentium.</p>
+                            <a href="#services" class="btn btn-primary" :style="{backgroundColor: COLOR}">Know more</a>
+                        </div>
+                        <div class="col-lg-5 col-md-7 col-sm-10 img-container">
+                            <div class="circle" :style="{backgroundColor: COLOR}"></div>
+                            <img src="IMAGES/intro.png" height="400px"  alt="">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="container" id="about">
+                    <div class="row">
+                        <div class="col-lg-4 pub">
+                            <div :style="{backgroundColor:COLOR}" class="satisfiedCli">
+                                <span>2.5K</span>
+                                <p>SATISFIED CLIENTS</p>
+                            </div>
+                            <div class="img-container rounded-circle">
+                                <img src="IMAGES/about.png" height="220px" width="350px" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 text-container">
+                            <div class="title" style="text-align:left;">
+                                <hr><span :style="{color: COLOR}" >About us</span>
+                                <hr>
+                            </div>
+                            <div class="content">
+                                <h2 class="mb-2">We're cleaning since 2010</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eligendi odio a earum
+                                    aperiam unde vel voluptates quibusdam, delectus laboriosam atque dolor, facilis iure?
+                                    Quisquam quas incidunt fugit saepe iste?</p>
+                                <p>Lorem ipsum dolor sit,laborum assumenda tenetur adipisci enim et dolorem eos, explicabo
+                                    voluptas aliquid debitis corporis eveniet minima illo, aspernatur eaque?</p>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div  class="container" id="services">
+                    <div class="row">
+                        <div class="title">
+                            <hr><span :style="{color: COLOR}">Services</span>
+                            <hr>
+                            <h2 class="ms-5 mb-5">What we do ?</h2>
+                        </div>
+                    
+                    </div>
+                    <div  class="row d-flex justify-content-center ms-5 ps-3">
+                        <div class="col-md-3 col-sm-6 ">
+                            <div class="img-container mb-3">
+                                <img src="IMAGES/service1.jpg" height="150px" width="200px" alt=""
+                                    class="rounded-circle img-thumbnail" :class="[dark? 'darkSevice' : '']">
+                            </div>
+                            <h4>Carpet Cleaning</h4>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="img-container mb-3">
+                                <img src="IMAGES/service2.jpg" height="150px" width="200px" alt=""
+                                    class="rounded-circle img-thumbnail" :class="[dark? 'darkSevice' : '']">
+                            </div>
+                            <h4>Window Cleaning</h4>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="img-container mb-3">
+                                <img src="IMAGES/service3.jpg" height="150px" width="200px" alt=""
+                                    class="rounded-circle img-thumbnail" :class="[dark? 'darkSevice' : '']">
+                            </div>
+                            <h4>Bathroom Cleaning</h4>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="img-container mb-3">
+                                <img src="IMAGES/service4.jpg" height="150px" width="200px" alt=""
+                                    class="rounded-circle img-thumbnail" :class="[dark? 'darkSevice' : '']">
+                            </div>
+                            <h4>Furniture Cleaning</h4>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="container" id="pricing">
+                    <div class="row">
+                        <div class="title">
+                            <hr><span :style="{color: COLOR}">Pricing</span>
+                            <hr>
+                            <h2 class="ms-5 mb-5">Our Pricing Plans</h2>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-evenly">
+                        <div :class="[dark? 'darkCard' : '']" v-for="plan in plans" class="card mb-4" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">{{plan.type}}</h5>
+                                <div class="price rounded-circle text-center">
+                                    <span :style="{color:COLOR}">${{plan.price}}</span>
+                                    <p>Monthly</p>
+                                </div>
+                                <p class="card-text"><i v-if="plan.features[0]" class="bi bi-check-lg"></i><i v-else class="bi bi-x"></i>Window Cleaning</p>
+                                <p class="card-text"><i v-if="plan.features[1]" class="bi bi-check-lg"></i><i v-else class="bi bi-x"></i>Carpet Cleaning</p>
+                                <p class="card-text"><i v-if="plan.features[2]" class="bi bi-check-lg"></i><i v-else class="bi bi-x"></i>Furniture Cleaning</p>
+                                <p class="card-text"><i v-if="plan.features[3]" class="bi bi-check-lg"></i><i v-else class="bi bi-x"></i>Car Cleaning</p>
+                                <p class="card-text"><i v-if="plan.features[4]" class="bi bi-check-lg"></i><i v-else class="bi bi-x"></i>Bathroom Cleaning</p>
+                                <div class="grid mx-auto col-8 me-4">
+                                    <a href="#" class="btn btn-primary" :style="{backgroundColor: COLOR}">Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="container" id="contact">
+                    <div class="row">
+                        <div class="title">
+                            <hr><span :style="{color: COLOR}">Contact Us</span>
+                            <hr>
+                            <h2 class="ms-5 mb-5">Have Any Question</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div :class="[dark? 'darkGeneral' : '']" class="col-md-5 coordonnees">
+                            <div class="block">
+                                <div :class="[dark? 'darkIcon' : '']" class="me-3 icon-container rounded-circle">
+                                    <i :style="{color:COLOR}" class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Address</h3>
+                                    <p class="mb-5">Block-A, Sec-75,rouiba, Algiers</p>
+                                </div>
+                            </div>
+                
+                            <hr class="w-50">
+                            <div class="block">
+                                <div :class="[dark? 'darkIcon' : '']" class="me-3 icon-container rounded-circle">
+                                    <i :style="{color:COLOR}" class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Call Us</h3>
+                                    <p class="mb-5">919654293</p>
+                                </div>
+                            </div>
+                            
+                            
+                            <hr class="w-50">
+                            <div class="block">
+                                <div :class="[dark? 'darkIcon' : '']" class="me-3 icon-container rounded-circle">
+                                    <i :style="{color:COLOR}" class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Email Us</h3>
+                                    <p>info@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                    
+                        </div>
+                        <div class="col-md-7">
+                            <form>
+                                <input type="text" class="form-control mb-2" placeholder="Name">
+                                <input type="email" class="form-control mb-2" placeholder="Email">
+                                <input type="text" class="form-control mb-2" placeholder="Phone">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="floatingTextarea" placeholder="Message"></textarea>
+                                    <label for="floatingTextarea">Message</label>
+                                </div>
+                                <input type="submit" value="Send Message" class="col-4 text-light btn btn-primary" :style="{backgroundColor: COLOR}">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        
+                <footer :style="{backgroundColor:COLOR}" class="text-center">
+                    <div class="follow">
+                        <h3 class="text-light">Follow Us</h3>
+                        <div class="socialMedia">
+                            <div class="icon-container">
+                                <i :style="{color:COLOR}" class="bi bi-facebook"></i>
+                            </div>
+                            <div class="icon-container">
+                                <i :style="{color:COLOR}" class="bi bi-twitter"></i>
+                            </div>
+                            <div class="icon-container">
+                                <i :style="{color:COLOR}" class="bi bi-instagram"></i>
+                            </div>
+                            <div class="icon-container">
+                                <i :style="{color:COLOR}" class="bi bi-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+
+            <div :style="{display: settingsDispaly, backgroundColor: COLOR}" class="settings" @click="afficherSideBar">
+                <i class="bi bi-gear-fill"></i>
+            </div>
+            
+            <div class="sidebar" :style="{display: sideBarDispaly, boxShadow: '-10px 8px 15px '+SHADOW}" :class="[dark? 'darkSideBar' : '']">
+                <div @click="afficherSettings" class="i-container" :style="{backgroundColor:COLOR}">
+                    <i class="bi bi-x"></i>
+                </div>
+                <h2>Style Switcher</h2>
+                <hr>
+                <p>Theme Color</p>
+                <input type="color" class="col-8" v-model="COLOR">
+                <p>{{COLOR}}</p>
+                <hr>
+                <div class="darkM">
+                    <p>Dark Mode</p>
+                    <i :style="{color:COLOR}" @click="dark = !dark" v-if="!dark" class="bi bi-toggle-off"></i>
+                    <i :style="{color:COLOR}" @click="dark = !dark" v-else class="bi bi-toggle-on"></i>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+    </div>
+
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

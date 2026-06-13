@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar-toggle-color: rgb(39, 39, 39);
+    --nav-link-hover: black;
+}
+
+#app.darkGeneral {
+    --navbar-toggle-color: white;
+    --nav-link-hover: rgb(232, 232, 232);
+}
+body {
+    background-color: rgb(255, 220, 220);
+}
+div.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+div.mainContent {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+div.intro, div#about, div#services, div#pricing, div#contact {
+    padding-left: 60px;
+}
+nav ul li.firstlink {
+    margin-left: 250px;
+}
+nav ul li.nav-item {
+    margin-right: 40px;
+    border-radius: 12px;
+    padding: 0 10px;
+}
+nav .navbar-nav {
+    text-align: center;
+}
+nav ul li.nav-item:hover a {
+    transform: scale(1.06);
+    color: var(--nav-link-hover) !important;
+}
+nav ul li.nav-item a {
+    font-size: 20px;
+    border-bottom: solid 2px rgb(200, 70, 70);
+    transition: all .5s ease-in-out;
+}
+
+.navbar-toggler {
+    border: none !important;
+    padding: 0 !important;
+}
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.navbar-toggler i {
+    color: var(--navbar-toggle-color);
+    font-size: 32px;
+}
+@media all and (max-width:1200px) {
+    nav ul li.nav-item {
+        margin-left: 40px;
+    }
+    nav ul li.nav-item:hover a {
+        transform: scale(1.06) !important;
+        color: var(--nav-link-hover) !important;
+    }
+    nav ul li.nav-item {
+        width: 50% !important;
+        margin: 0 auto !important;
+    }
+}
+@keyframes roll-left {
+    from {
+        transform: translateX(-400px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes roll-right {
+    from {
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes roll-bottom {
+    from {
+        transform: translateY(200px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+div.intro div.img-container {
+    position: relative;
+    margin-left: 30px;
+}
+div.intro .circle {
+    height: 380px;
+    width: 400px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    animation: roll-left 1.2s ease-in-out;
+}
+div.intro div.img-container img {
+    position: absolute;
+    top: -30px;
+    left: 50px;
+    animation: roll-right 1.2s ease-in-out;
+}
+div.intro .text-container h1 {
+    font-family: 'Lato', sans-serif;
+    width: 300px;
+}
+div.intro .text-container a {
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 8px;
+}
+div#about {
+    margin-top: 350px;
+}
+div#about .pub {
+    position: relative;
+}
+div#about .img-container {
+    background-color: white;
+    position: relative;
+    height: 250px;
+    width: 290px;
+    border: solid 1px gray;
+}
+div#about .img-container:hover img {
+    transform: scale(1.05);
+}
+div#about .img-container img {
+    position: absolute;
+    bottom: 10px;
+    left: -90px;
+    transition: .5s transform ease-in;
+}
+div#about .satisfiedCli {
+    height: 100px;
+    width: 110px;
+    padding-left: 25px;
+    color: white;
+    border-radius: 0 30%;
+    position: absolute;
+    bottom: 60px;
+    left: -38px;
+    z-index: 4;
+}
+div#about .satisfiedCli span {
+    font-size: 28px;
+    font-weight: bold;
+}
+div.title {
+    position: relative;
+    text-align: center;
+}
+div.title span {
+    font-size: 20px;
+    font-weight: bold;
+  position: absolute;
+  top: 0;
+  margin-left: 10px;
+}
+div.title hr {
+    display: inline-block;
+    width: 30px;
+    color: black !important;
+    margin-left: 115px; 
+}
+div#about .content h2 {
+    font-family: 'Lato', sans-serif;
+}
+div#services, div#pricing, div#contact {
+    margin-top: 170px;
+}
+div#services .img-thumbnail {
+   padding: .4rem;
+   box-shadow: 6px 8px 12px rgb(162, 162, 162); 
+}
+div#pricing .price {
+    height: 120px;
+    width: 130px;
+    margin: 20px auto;
+    border: solid .3rem rgb(190, 187, 187);
+    padding: 10px;
+}
+div#pricing .price span {
+    font-size: 40px;
+    font-weight: bold;
+}
+div#pricing i {
+    margin-right: 7px;
+    font-size: 25px;
+}
+div#pricing .card {
+    box-shadow: 0px 0px 12px rgb(171, 171, 171);
+    transition: .5s transform ease-in-out;
+}
+div#pricing .card:hover {
+    transform: scale(1.04);
+}
+div#pricing .card h5 {
+    font-weight: bold;
+    font-size: 25px;
+}
+.icon-container {
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    box-shadow: 6px 8px 12px rgb(172, 172, 172);
+}
+.icon-container i {
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+div#contact div.block {
+    display: flex;
+}
+div#contact .form-control {
+    width: 90%;
+    border-radius: 25px;
+    border: solid 1px gray;
+    padding-left: 20px;
+}
+div#contact textarea {
+    height: 150px;
+}
+div#contact input[type='submit'] {
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 80px;
+}
+div#app {
+    position: relative;
+}
+footer {
+    height: 150px;
+    width: 100%;
+    position: absolute ;
+    bottom: -150px;
+}
+footer .socialMedia .icon-container {
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+footer .follow {
+    width: 50%;
+    margin: 30px auto;
+}
+div.settings {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    position: fixed;
+    top: 150px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 4;
+    box-shadow: 0px 0px 12px white;
+}
+div.settings i {
+    color: white;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    font-size: 20px;  
+}
+ div.i-container i {
+    color: white;
+    position: absolute;
+    top: 3px;
+    right: 8px;
+}
+div.sidebar {
+    background-color: white;
+    max-width: 350px;
+    padding: 20px;
+    position: relative;
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+}
+.btn {
+    border: none;
+}
+div.i-container {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    left: -28px;
+    top: 100px;
+}
+div.sidebar .darkM {
+    display: flex;
+}
+div.sidebar .darkM i {
+    font-size: 30px;
+    margin-top: -10px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+/* Dark mode*/
+.darkGeneral {
+    background-color: rgb(26, 25, 25);
+    color: white !important;
+    box-shadow: none !important;
+}
+.darkCard {
+  background-color: rgb(31, 31, 31);
+  box-shadow: 0px 0px 12px white !important;
+}
+.darkSevice {
+    box-shadow: none !important;
+    background-color: gray ;
+    box-shadow: 5px 4px 10px white !important;
+}
+.darkNav {
+    color: white !important;
+}
+.darkSideBar {
+    background-color: rgb(54, 54, 54) !important;
+}
+.darkIcon {
+    box-shadow: none !important;
+}
